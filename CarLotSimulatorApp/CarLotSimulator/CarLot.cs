@@ -10,7 +10,7 @@ public class CarLot
     public void CarInfo()
     {
         foreach(var car in JoesCars)
-        {
+        { 
             Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
         }
     }

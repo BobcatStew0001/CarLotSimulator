@@ -20,26 +20,39 @@ namespace CarLotSimulator
             
             var JoesUsedCars = new CarLot();
 
+            // Dot Notation
             var chevy = new Car();
             chevy.Year = 2024;
-            chevy.Make = "Chevrolet"; 
+            chevy.Make = "Chevrolet";
             chevy.Model = "Tahoe";
             chevy.EngineNoise = "Clank, clank, clank";
-            chevy.IsDrivable = "yes";
+            chevy.HonkNoise = "BEEP!";
+            chevy.IsDrivable = true;
+
+            chevy.MakeEngineNoise(chevy.EngineNoise);
+            chevy.MakeHonkNoise(chevy.HonkNoise);
             JoesUsedCars.JoesCars.Add(chevy);
             
-            var ford = new Car();
+            // Object Initializer
+            var ford = new Car()
             {
-                ford.Year = 2024;
-                ford.Make = "Ford";
-                ford.Model = "F-150";
-                ford.EngineNoise = "Vroooooooommmm";
-                ford.IsDrivable = "Absolutely";
-            }
+                Year = 2024,
+                Make = "Ford",
+                Model = "F-150",
+                EngineNoise = "Vroooooooommmm",
+                HonkNoise = "HONK!",
+                IsDrivable = true
+            };
+            ford.MakeEngineNoise(ford.EngineNoise);
+            ford.MakeHonkNoise(ford.HonkNoise);
             JoesUsedCars.JoesCars.Add(ford);
             
             
-            var yoda = new Car(2024, "Toyota", "LandCrusier", "WOOOOOO", "It sure is");
+            // Custom Constructor
+            var yoda = new Car(2024, "Toyota", "LandCrusier", "WOOOOOO", "BEEP BEEP!", true);
+            
+            yoda.MakeEngineNoise(yoda.EngineNoise);
+            yoda.MakeHonkNoise(yoda.HonkNoise);
             JoesUsedCars.JoesCars.Add(yoda);
 
             JoesUsedCars.CarInfo();

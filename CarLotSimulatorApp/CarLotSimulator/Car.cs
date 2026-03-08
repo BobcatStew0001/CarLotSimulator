@@ -21,8 +21,9 @@ public class Car
     }
 
 
-    public Car()
+    public Car() //numberOfCars was not working correctly the way I wrote it. 
     {
+        CarLot.numberOfCars++; //ai suggested this edit to be able to call the field
     }
 
     public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDrivable)
@@ -33,5 +34,6 @@ public class Car
         EngineNoise = engineNoise;
         HonkNoise = honkNoise;
         IsDrivable = isDrivable;
+        CarLot.numberOfCars++;//also told me I needed to add this as well. 
     }
 }

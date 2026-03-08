@@ -22,6 +22,7 @@ namespace CarLotSimulator
 
             // Dot Notation
             var chevy = new Car();
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             chevy.Year = 2024;
             chevy.Make = "Chevrolet";
             chevy.Model = "Tahoe";
@@ -43,6 +44,7 @@ namespace CarLotSimulator
                 HonkNoise = "HONK!",
                 IsDrivable = true
             };
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             ford.MakeEngineNoise(ford.EngineNoise);
             ford.MakeHonkNoise(ford.HonkNoise);
             JoesUsedCars.JoesCars.Add(ford);
@@ -50,6 +52,7 @@ namespace CarLotSimulator
             
             // Custom Constructor
             var yoda = new Car(2024, "Toyota", "LandCrusier", "WOOOOOO", "BEEP BEEP!", true);
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             
             yoda.MakeEngineNoise(yoda.EngineNoise);
             yoda.MakeHonkNoise(yoda.HonkNoise);
@@ -68,8 +71,17 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
-            
-            
+            var benz = new Car()
+            {
+                Year = 2024,
+                Make = "Benz",
+                Model = "G-Waggon",
+                EngineNoise = "Vroooooooommmm",
+                IsDrivable = true
+            };
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
+            //I added the Benz to test the new numberOfCars field and it was successful.
+
         }
         
     }
